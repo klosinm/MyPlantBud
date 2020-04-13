@@ -1,0 +1,215 @@
+
+
+<style>
+    .title {
+        text-align: Left;
+        padding-left: 15px;
+        margin-top: 2px;
+        padding-top: 18px;
+        padding-right: 15px;
+        font-weight: bolder;
+        font-family: fantasy;
+        font-size: 45px;
+        /*color: rgb(128, 0, 128);*/
+        color: bisque;
+    }
+
+    /*aqua background for header*/
+    .titleBackground {
+        padding-left: 0px;
+        padding-top: 0px;
+        padding-right: 15px;
+        margin-bottom: 40px;
+        height: 100px;
+        background-color: rgb(0, 113, 128);
+        border-radius: 15px;
+    }
+
+
+    .Welcome {
+        position: relative;
+        text-align: center;
+        font-family: sans-serif;
+        margin: auto;
+        color: rgb(9, 44, 119);
+        background-color: blanchedalmond;
+        width: 850px;
+        border-radius: 15px;
+        border: 2px solid rgb(9, 44, 119);
+
+    }
+
+    h2 {
+        font-size: 45px;
+        display: inline;
+    }
+
+    body {
+        background-color: rgb(175, 202, 219);
+    }
+
+    .QuizBorder {
+        width: auto;
+        height: auto;
+        margin-right: 150px;
+        margin-left: 3px;
+        margin-bottom: 15px;
+        background-color: blanchedalmond;
+        overflow: auto;
+        border: 5px solid rgb(9, 44, 119);
+        border-radius: 15px;
+        padding-left: 10px;
+
+    }
+
+    option {
+        background-color: #82ff8c;
+    }
+
+
+    .NavOptions {
+        font-family: sans-serif;
+        margin-left: 3px;
+         padding: 3px;
+        margin-bottom: 10px;
+        color: blanchedalmond;
+        font-size: 15px;
+        background-color: rgb(0, 113, 128);
+        border: 5px solid rgb(9, 44, 119);
+        border-radius: 10px;
+    }
+
+    input {
+        font-family: sans-serif;
+       
+        margin-left: 3px;
+        margin-bottom: 15px;
+        color: blanchedalmond;
+        font-size: 15px;
+        background-color: rgb(0, 113, 128);
+        border: 5px solid rgb(9, 44, 119);
+        border-radius: 10px;
+
+
+    }
+</style>
+
+
+<% if (quiz.errors.length > 0) { %>
+<% console.log("Found errors: "); console.log(quiz.errors); %>
+
+<div>
+    <p>Wait!:</p>
+    <ul>
+        <%- quiz.errors.map((item) => `<li>${item}</li>` ).join("\n"); %>
+    </ul>
+</div>
+<% } %>
+
+<form action=/quizResult accept-charset="UTF-8" method="post">
+
+
+    <div class='titleBackground'>
+        <h1 class="title">My Plant Bud - Quiz</h1>
+    </div>
+
+    Fill this out to the best of your abilites to see which plant would be happiest with you!
+
+    <div class="QuizBorder">
+        <tr>
+            <p> 1. Amount of sunlight at home?</p>
+            <select name=quiz[sunlight] id="sunlight">
+                <option value="null1">Select</option>
+                <option value="sun1">Very Sunny</option>
+                <option value="semi1">Semi Sunny</option>
+                <option value="shady1">Shady</option>
+                <option value="NS1">No Sun</option>
+            </select>
+
+            <p> 2. What direction do your windows face?</p>
+            <select name=quiz[direction] id="direction">
+                <option value="null2">Select</option>
+                <option value="North2">North</option>
+                <option value="South2">South</option>
+                <option value="East2">East</option>
+                <option value="West2">West</option>
+            </select>
+            <p> 3. How often are you home (to water plant?)</p>
+            <select name=quiz[days] id="days">
+                <option value="null3">Select</option>
+                <option value="everyday3">Every day</option>
+                <option value="five3">5 days a week</option>
+                <option value="three3">3 days a week</option>
+                <option value="less3">less then 3 days a week</option>
+            </select>
+
+
+            <p> 4. What times of the day are you able to water your plant?</p>
+            <select name=quiz[daytime] id="daytime">
+                <option value="null4">Select</option>
+                <option value="day4">All day!</option>
+                <option value="morning4">Morning (3am-6am)</option>
+                <option value="day4">The Day (6am -3pm)</option>
+                <option value="afternoon4">Afternoon (3pm-5pm)</option>
+                <option value="evening4">Evening (5pm-11pm)</option>
+            </select>
+
+            <p> 5. Do you have a pet that could hurt your plant? (cats like to chew on plants)</p>
+            <select name=quiz[pet] id="pet">
+                <option value="null5">Select</option>
+                <option value="yes5">Yes</option>
+                <option value="no5">No</option>
+
+            </select>
+            <p> 6. How much space do you have at home for your plant?</p>
+            <select name=quiz[plantsize] id="plantsize">
+                <option value="null6">Select</option>
+                <option value="xs6">Just on a desk (xsmall plant)</option>
+                <option value="small6">Small amount of room (small plant)</option>
+                <option value="medium6">Good amount of room (medium plant)</option>
+                <option value="large6">I have ROOM! (large plant)</option>
+            </select>
+            <p> 7. Do you want your plant to live on the floor, shelf, or hang?</p>
+            <select name=quiz[plantplacement] id="plantplacement">
+                <option value="null7">Select</option>
+                <option value="floor7">Floor</option>
+                <option value="shelf7">Shelf</option>
+                <option value="hang7">Hang</option>
+                <option value="Any7">Anywhere!</option>
+            </select>
+            <p> 8. Where do you live (for session change)?</p>
+            <select name=quiz[HemLocation] id="HemLocation">
+                <option value="null8">Select</option>
+                <option value="NorthHem8">North Hemisphere</option>
+                <option value="SouthHem8">South Hemisphere</option>
+            </select>
+            <p> 9. Do you prefer flowers or pretty leaves?</p>
+            <select name=quiz[TypeofPlant] id="TypeofPlant">
+                <option value="null9">Select</option>
+                <option value="Flowers9">Flowers</option>
+                <option value="leaves9">Leaves</option>
+                <option value="Cacti9">Cacti!</option>
+            </select>
+
+            <p> 10. Do you prefer plants that are one color or many colors?</p>
+            <select name=quiz[colorful] id="TypeofcolorfulPlant">
+                <option value="null10">Select</option>
+                <option value="multi10">Multi Colors</option>
+                <option value="onetwo10">One or Two Colors</option>
+                <option value="one10">One Color</option>
+            </select>
+
+            <p></p>
+        </tr>
+
+
+    </div>
+
+    <div class="actions ">
+        <input type="submit" name="commit" value="Submit" />
+    </div>
+    <a class="NavOptions" href="/MyPlantBud">Back to Menu </a>
+
+    
+</form>
+

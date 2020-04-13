@@ -1,0 +1,63 @@
+From quizForm:
+
+
+<!-- <% 
+    submitLabel = "Submit Bug";
+    route = "/quiz";
+  }
+%>
+<% if (quiz.errors.length > 0) { %>
+<% console.log("Found errors"); console.log(quiz.errors); %>
+-->
+
+<!-- <form action="<%=route%>" accept-charset="UTF-8" method="post"> -->
+
+
+
+    <!-- <div class="NavOptions ">
+        <input type="submit" name="commit" value="<%= submitLabel %>" />
+    </div> -->
+
+</body>
+
+
+<!-- < /form> -->
+------
+
+
+<p>
+        The id value of quiz question 1:
+        <span class="output1"></span> <br />
+        The id value of quiz question 2:
+        <span class="output2"></span> <br />
+    </p>
+
+
+<script type="text/javascript">
+
+        getOption();
+
+        function getOption() {
+            selectElement1 = document.querySelector('#sunlight');
+            output1 = selectElement1.options[selectElement1.selectedIndex].value;
+            if(output1 == "null1"){
+                 document.querySelector('.output1').textContent = "Please pick an option for question 1!";
+
+            }
+            else{
+                 document.querySelector('.output1').textContent = output1;
+            }
+           
+
+            selectElement2 = document.querySelector('#direction');
+            output2 = selectElement2.options[selectElement2.selectedIndex].value;
+            document.querySelector('.output2').textContent = output2;
+
+
+        } 
+    </script>
+
+<button class="NavOptions" onclick="getOption()" href="/quizResults" > Submit</button> 
+   
+
+
