@@ -61,3 +61,76 @@ From quizForm:
    
 
 
+---
+
+
+<%
+route = '/quizResult/${quiz.id}
+%>
+
+<% if (quiz.errors.length > 0) { %>
+<% console.log("Found errors: "); console.log(quiz.errors); %>
+
+<div>
+    <p>Wait!:</p>
+    <ul>
+        <%- quiz.errors.map((item) => `<li>${item}</li>` ).join("\n"); %>
+    </ul>
+</div>
+<% } %>
+
+<form action="<%=route%>" accept-charset="UTF-8" method="post">
+
+
+
+
+<script type="text/javascript">
+
+    validate();
+
+    function validate() {
+
+        var ddl = document.getElementById("sunlight");
+        var selectedValue = ddl.options[ddl.selectedIndex].value;
+        console.log("selectedValue: ", selectedValue);
+        if (selectedValue == "null1") {
+            console.log("selectedValue: ", selectedValue);
+            console.log("Please select a plant question");
+        }
+    } 
+
+
+
+</script>
+
+
+
+
+<% console.log("errors, before anything: ", quiz.errors.length); %>
+
+
+
+
+
+
+
+<%console.log("quiz, in quizForm: ", quiz)%>
+<% if (quiz.errors.length > 0) { %><% console.log("Found errors: "); console.log("From Quiz Form:" , quiz.errors); %>
+<div>
+    <p>Wait!:</p>
+    <ul> <%- quiz.errors.map((item) => `<li>${item}</li>` ).join("\n"); %> </ul>
+</div><% } %>
+
+
+
+
+-------
+
+ Quiz result
+
+    <% if (quiz.sunlight == "sun1") { %>
+   
+    <div>
+        Get a cacti!
+    </div>
+    <% } %>

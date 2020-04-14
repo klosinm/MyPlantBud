@@ -7,20 +7,17 @@ class plantOptionsDB {
         return this.allQuizes;
     }
 
-    static find(id) {
-        return this.allQuizes.find((item) => item.id == id);
-    }
-
     static create(quizDescription) {
 
-        let newQuiz = new Quiz(quizDescription)
-        if (newQuiz.isValid()) {
-
-            newQuiz.id = this.allQuiz.length;
-            this.allQuizes.push(newQuiz);
-            //console.log("IN CREATE", newUser);
-        }
-        //console.log("IN CREATE AFTER", newUser);
+        let newQuiz = new Quiz(quizDescription);
+        console.log("In DB, create method: ", newQuiz);
+        //if (newQuiz.isValid()) {
+            //newQuizLength = this.allQuizes.length;
+            //console.log("New quiz length", newQuizLength);
+           // this.allQuizes.push(newQuiz);
+            //res.render('quizResult', { quiz: req.body.quiz  });
+      //  }
+        console.log("IN CREATE AFTER", newQuiz);
         return newQuiz;
     }
 

@@ -1,5 +1,4 @@
 
-
 <style>
     .title {
         text-align: Left;
@@ -95,18 +94,8 @@
 </style>
 
 
-<% if (quiz.errors.length > 0) { %>
-<% console.log("Found errors: "); console.log(quiz.errors); %>
 
-<div>
-    <p>Wait!:</p>
-    <ul>
-        <%- quiz.errors.map((item) => `<li>${item}</li>` ).join("\n"); %>
-    </ul>
-</div>
-<% } %>
-
-<form action=/quizResult accept-charset="UTF-8" method="post">
+<form action="/quizResult" accept-charset="UTF-8" method="post">
 
 
     <div class='titleBackground'>
@@ -119,7 +108,7 @@
         <tr>
             <p> 1. Amount of sunlight at home?</p>
             <select name=quiz[sunlight] id="sunlight">
-                <option value="null1">Select</option>
+                <option  value="null1">Select</option>
                 <option value="sun1">Very Sunny</option>
                 <option value="semi1">Semi Sunny</option>
                 <option value="shady1">Shady</option>
@@ -128,14 +117,14 @@
 
             <p> 2. What direction do your windows face?</p>
             <select name=quiz[direction] id="direction">
-                <option value="null2">Select</option>
+                <option  value="null2">Select</option>
                 <option value="North2">North</option>
                 <option value="South2">South</option>
                 <option value="East2">East</option>
                 <option value="West2">West</option>
             </select>
             <p> 3. How often are you home (to water plant?)</p>
-            <select name=quiz[days] id="days">
+            <select  name=quiz[days] id="days">
                 <option value="null3">Select</option>
                 <option value="everyday3">Every day</option>
                 <option value="five3">5 days a week</option>
@@ -208,8 +197,32 @@
     <div class="actions ">
         <input type="submit" name="commit" value="Submit" />
     </div>
-    <a class="NavOptions" href="/MyPlantBud">Back to Menu </a>
+
+    <a class="NavOptions"  href="/MyPlantBud">Back to Menu </a>
 
     
+
+
+
 </form>
+
+
+<script type="text/javascript">
+
+    validate();
+
+    function validate() {
+
+        var ddl = document.getElementById("sunlight");
+        var selectedValue = ddl.options[ddl.selectedIndex].value;
+        console.log("selectedValue: ", selectedValue);
+        if (selectedValue == "null1") {
+            console.log("selectedValue: ", selectedValue);
+            console.log("Please select a plant question");
+        }
+    }
+
+
+
+</script>
 
