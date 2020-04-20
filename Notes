@@ -134,3 +134,184 @@ route = '/quizResult/${quiz.id}
         Get a cacti!
     </div>
     <% } %>
+
+
+<script type="text/javascript">
+
+        function empty() {
+             selectElement1 = document.querySelector('#sunlight');
+            output1 = selectElement1.options[selectElement1.selectedIndex].value;
+            if (question1 = "null1") {
+                alert("Enter a valid sunlight!");     
+            }
+            else{
+                console.log("Valid number 1")
+            }
+              selectElement2 = document.querySelector('#direction');
+            output2 = selectElement2.options[selectElement2.selectedIndex].value;
+             if (question2 = "null2") {
+                alert("Enter a valid Direction!");
+                
+            }
+             else {
+                 console.log("Valid number 2")
+             }
+        }
+    </script>
+
+
+  <option selected disabled hidden style='display: none' value=''>Select </option>
+
+
+
+
+            <p> 2. What direction do your windows face?</p>
+            <select name=quiz[direction] id="direction">
+                <option  value="null2">Select</option>
+                <option value="North2">North</option>
+                <option value="South2">South</option>
+                <option value="East2">East</option>
+                <option value="West2">West</option>
+            </select>
+            <p> 3. How often are you home (to water plant?)</p>
+            <select  name=quiz[days] id="days">
+                <option value="null3">Select</option>
+                <option value="everyday3">Every day</option>
+                <option value="five3">5 days a week</option>
+                <option value="three3">3 days a week</option>
+                <option value="less3">less then 3 days a week</option>
+            </select>
+
+
+            <p> 4. What times of the day are you able to water your plant?</p>
+            <select name=quiz[daytime] id="daytime">
+                <option value="null4">Select</option>
+                <option value="day4">All day!</option>
+                <option value="morning4">Morning (3am-6am)</option>
+                <option value="day4">The Day (6am -3pm)</option>
+                <option value="afternoon4">Afternoon (3pm-5pm)</option>
+                <option value="evening4">Evening (5pm-11pm)</option>
+            </select>
+
+            <p> 5. Do you have a pet that could hurt your plant? (cats like to chew on plants)</p>
+            <select name=quiz[pet] id="pet">
+                <option value="null5">Select</option>
+                <option value="yes5">Yes</option>
+                <option value="no5">No</option>
+
+            </select>
+            <p> 6. How much space do you have at home for your plant?</p>
+            <select name=quiz[plantsize] id="plantsize">
+                <option value="null6">Select</option>
+                <option value="xs6">Just on a desk (xsmall plant)</option>
+                <option value="small6">Small amount of room (small plant)</option>
+                <option value="medium6">Good amount of room (medium plant)</option>
+                <option value="large6">I have ROOM! (large plant)</option>
+            </select>
+            <p> 7. Do you want your plant to live on the floor, shelf, or hang?</p>
+            <select name=quiz[plantplacement] id="plantplacement">
+                <option value="null7">Select</option>
+                <option value="floor7">Floor</option>
+                <option value="shelf7">Shelf</option>
+                <option value="hang7">Hang</option>
+                <option value="Any7">Anywhere!</option>
+            </select>
+            <p> 8. Where do you live (for session change)?</p>
+            <select name=quiz[HemLocation] id="HemLocation">
+                <option value="null8">Select</option>
+                <option value="NorthHem8">North Hemisphere</option>
+                <option value="SouthHem8">South Hemisphere</option>
+            </select>
+            <p> 9. Do you prefer flowers or pretty leaves?</p>
+            <select name=quiz[TypeofPlant] id="TypeofPlant">
+                <option value="null9">Select</option>
+                <option value="Flowers9">Flowers</option>
+                <option value="leaves9">Leaves</option>
+                <option value="Cacti9">Cacti!</option>
+            </select>
+
+            <p> 10. Do you prefer plants that are one color or many colors?</p>
+            <select name=quiz[colorful] id="TypeofcolorfulPlant">
+                <option value="null10">Select</option>
+                <option value="multi10">Multi Colors</option>
+                <option value="onetwo10">One or Two Colors</option>
+                <option value="one10">One Color</option>
+            </select>
+
+
+
+
+IN QUIZ CONSTRUCOTR++++++
+   this.days = description.days;
+            this.daytime = description.daytime;
+            this.pet = description.pet;
+            this.plantsize = description.plantsize;
+            this.plantplacement = description.plantplacement;
+            this.HemLocation = description.HemLocation;
+            this.TypeofPlant = description.TypeofPlant;
+            this.colorful = description.colorful;
+
+            _______
+
+
+  <% if (quiz.sunlight = "semi1") { %>
+          <%- include('fig') %>
+        <% } %>
+
+
+
+
+
+<% 	// if the new user has an id, update; otherwise create new user
+	if (quiz.sunlight = "semi1") {
+		submitLabel = "Update user";
+		route = `/plant/2`;
+    }
+    else if (quiz.sunlight = "sun1"){
+        route='/MyPlantBud';
+    }
+
+    console.log("QUIZ IN quizForm: " + quiz);
+%>
+
+
+
+ <div class='titleBackground'>
+        <h1 class="title">My Plant Bud - Results</h1>
+    </div>
+
+
+    <span><span class='label'>Amount of Sunlight:</span>
+        <%= quiz.sunlight %> <br />
+
+    <span><span class='label'>Windows:</span>
+        <%= quiz.direction %> <br />
+
+
+    <span><span class='label'>How Often are you home:</span>
+        <%= quiz.days %> <br />
+    
+    <span><span class='label'>Best time you are home to water plant:</span>
+        <%= quiz.daytime %> <br />
+
+
+if (quiz.sunlight = "semi1") {
+        		submitLabel = "Update user";
+        		include( `/plant/2');
+            }
+
+
+
+
+
+            QUIZ Results
+
+            <% 	if (quiz.sunlight.includes("semi1")) {  %>
+        <a class="shiftRight takeQuizButton" href="/plant/2">Yes!</a>
+     <% } %>
+
+
+
+
+    <a class="shiftRight takeQuizButton" href="/quiz/<%= quiz.id %>/edit">Maybe not, let me redo </a>
+         

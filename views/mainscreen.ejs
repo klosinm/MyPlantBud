@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
-
 <style>
     /*TO RUN: node express.js */
     .title {
@@ -60,34 +57,33 @@
         margin-right: auto;
         margin-top: auto;
         position: relative;
-        padding-top:10px;
+        padding-top: 10px;
         font-family: sans-serif;
         color: blanchedalmond;
         font-size: 15px;
 
         width: 55px;
         height: 50px;
-        background-color: rgb(0, 113, 128);;
+        background-color: rgb(0, 113, 128);
         border: 5px solid rgb(9, 44, 119);
         border-radius: 1000px;
-       
+
     }
 
-    .Center{
+    .Center {
         position: block;
-           
+
         text-align: center;
 
     }
 
-    .shiftRight{
+    .shiftRight {
         display: block;
         text-align: center;
         font-family: sans-serif;
         margin: auto;
- 
+
     }
-       
 </style>
 
 <head>
@@ -112,25 +108,39 @@
 
         </p>
 
-    </div >
+    </div>
 
-        <img class="shiftRight" src="Images/PlantMenu.png" width="500" height="90" />
+    <img class="shiftRight" src="Images/PlantMenu.png" width="500" height="90" />
 
-        <a class="shiftRight takeQuizButton" href="/Quiz %>">Take Quiz</a>
+    <a class="shiftRight takeQuizButton" href="/quiz %>">Take Quiz</a>
 
-         <img class="shiftRight" src="Images/PlantMenu.png" width="500" height="90" />
+    <img class="shiftRight" src="Images/PlantMenu.png" width="500" height="90" />
     </div>
 
 
 
 
     <div>
-        Index of Plants: <br>
-
-        [List of Plants from database]
-
-
+        <h1>Plants in this Quiz!</h1>
+        <table>
+    
+    
+            <%    plants.forEach((plant) => { %>
+    
+            <tr>
+                <td> <%- plant.Title %> </td>
+    
+                <td>
+                    <img src="Images/hoya.jpg" />
+                    <a href="/plant/<%= plant.id %>">Show</a>
+                </td>
+            </tr>
+    
+            <% }) %>
+    
+        </table>
     </div>
+
 
 </body>
 

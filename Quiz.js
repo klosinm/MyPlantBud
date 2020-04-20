@@ -5,19 +5,27 @@ class Quiz{
         if (description) {
             this.sunlight = description.sunlight;
             this.direction = description.direction;
-            this.days = description.days;
-            this.daytime = description.daytime;
-            this.pet = description.pet;
-            this.plantsize = description.plantsize;
-            this.plantplacement = description.plantplacement;
-            this.HemLocation = description.HemLocation;
-            this.TypeofPlant = description.TypeofPlant;
-            this.colorful = description.colorful;
+         
         }
      
         this.errors = [];
     }
 
+
+    static get(id) {
+        return this.quizCollection.find((item) => item.id == id);
+    }
+
+    static create(quizInfo) {
+        let newQuiz = new Quiz(quizInfo);
+
+        if (newQuiz.isValid()) {
+
+            newQuiz.id = ++Quiz.Quizid;
+            this.quizCollection.push(newQuiz);
+        }
+        return newQuiz;
+    }
 
     isValid() {
         this.errors = [];
@@ -48,5 +56,8 @@ class Quiz{
     }
 
 }
+Quiz.Quizid = 0;
+Quiz.quizCollection = [];
 
+console.log("Quiz Collection in Quiz.js: " + Quiz.quizCollection);
 module.exports = Quiz;

@@ -1,0 +1,35 @@
+
+
+<html>
+
+
+<body>
+
+    
+
+    <h1>Plants</h1>
+    <table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Water Needed</th>
+        <th>Amount of Sunlight</th>
+        <th>Picture</th>
+    </tr>
+
+
+<%    plants.forEach((plant) => { %>
+    
+<tr>    
+    <td> <%- plant.Title %> </td> 
+    <td> <%- plant.Description %></td>
+    <td> <%- plant.WaterNeed %></td>
+    <td> <%- plant.Sunlight %></td>
+    <td> <%- plant.Picture %></td>
+</tr>
+<% }) %>
+
+</table>
+
+</body>
+</html>

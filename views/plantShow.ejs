@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
+<html>
 
 <style>
     .title {
@@ -10,7 +11,6 @@
         padding-right: 15px;
         font-weight: bolder;
         font-family: fantasy;
-
         font-size: 40px;
         /*color: rgb(128, 0, 128);*/
         color: bisque;
@@ -32,15 +32,16 @@
         display: inline;
         text-align: center;
         margin-right: auto;
- 
+        margin-top: auto;
         position: relative;
         font-family: sans-serif;
         color: blanchedalmond;
         font-size: 15px;
 
-      
+        width: 55px;
+        height: 55px;
         background-color: rgb(128, 0, 128);
-        
+        ;
         border: 5px solid rgb(97, 9, 119);
         border-radius: 1000px;
     }
@@ -122,54 +123,37 @@
 
     }
 </style>
-
 <body>
 
     <div class='titleBackground'>
-        <h1 class="title">My Plant Bud - Verification</h1>
+        <h1 class="title">My Plant Bud - Results</h1>
     </div>
 
-
-    <div class="Welcome">
-
-        <h1>What you Said:</h1>
-        <p>You have a house that is []. The plant would have windows facing the
-            [ ].You are home [ ] of the week to water it, and the best times for You to water
-            your plant would be from [ ]. You [ ] pets. 
-
-        </p>
-
+    <div>
+        <span><strong>Name: </strong></span>
+        <span class="text"><%= plant.Title %></span>
     </div>
-
-    </br>
-
-    </br>
-
-
-
-    <p class="correct"> Is this correct?</p>
-
-    </br>
-
-
-    <img class="shiftRight" src="Images/PlantMenu.png" width="400" height="80" />
-       
-    <a class=" takeQuizButton" href="/plant/2">Yes!</a>
-
-        
-        <a class=" takeQuizButton" href="/quiz">Maybe not, let me redo </a>
+    <br>
+    <div>
+        <span><strong>Description: </strong></span>
+        <span class="text"><%= plant.Description %></span>
+    </div>
+    <br>
+    <div>
+        <span><strong>Water Levels: </strong></span>
+        <span class="text"><%= plant.WaterNeed %></span>
+    </div>
+    <br>
+    <div>
+        <span><strong>Sunlight: </strong></span>
+        <span class="text"><%= plant.Sunlight %></span>
+    </div>
+    <br>
 
 
-        <img class="shiftRight" src="Images/PlantMenu.png" width="400" height="80" />
-   
 
-    </br>
-    </br>
+    <a class="shiftRight takeQuizButton" href="/MyPlantBud">Back to Menu </a>
 
-    <a class="takeQuizButton" href="/MyPlantBud">Back to Menu </a>
-
-    <body>
-
-
+</body>
 
 </html>
