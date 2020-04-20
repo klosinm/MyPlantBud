@@ -2,6 +2,10 @@
 <html lang="en">
 
 <style>
+
+    .keyWords{
+        color:red;
+    }
     .title {
         text-align: Left;
         padding-left: 15px;
@@ -62,6 +66,8 @@
         text-align: center;
         font-family: sans-serif;
         margin: auto;
+        padding-left: 2px;
+        padding-right: 2px;
         color: rgb(9, 44, 119);
         background-color: blanchedalmond;
         width: 850px;
@@ -133,9 +139,13 @@
     <div class="Welcome">
 
         <h1>What you Said:</h1>
-        <p>You have a house that is []. The plant would have windows facing the
-            [ ].You are home [ ] of the week to water it, and the best times for You to water
-            your plant would be from [ ]. You [ ] pets. 
+        <p>Your home has a room which is <span class="keyWords"><%= quiz.sunlight %></span>. 
+             You are able to water it every <span class="keyWords"><%= quiz.water %></span> week(s). 
+             You would like to have your plant living on your <span class="keyWords"><%= quiz.plantplacement %></span>.
+
+             Your plant will have pretty <span class="keyWords"><%= quiz.TypeofPlant %></span>
+             , and have <span class="keyWords"><%= quiz.colors %></span> color(s).
+
 
         </p>
 
@@ -154,10 +164,23 @@
 
     <img class="shiftRight" src="Images/PlantMenu.png" width="400" height="80" />
        
-    <a class=" takeQuizButton" href="/plant/2">Yes!</a>
+    <% 	if (quiz.water.includes("four") && quiz.colors.includes("one")  ) {  %>
+        
+  
+    <a class="shiftRight takeQuizButton" href="/plant/2">Yes!</a>
+    <% } 
+        else if (quiz.sunlight.includes('semi_sunny')) {  %>
+        <a class="shiftRight takeQuizButton" href="/plant/3">Yes!</a>
+        <% } 
+    
+      
+        else if (quiz.sunlight.includes('shady')) {  %>
+        <a class="shiftRight takeQuizButton" href="/plant/1">Yes!</a>
+        <% } %>
+
 
         
-        <a class=" takeQuizButton" href="/quiz">Maybe not, let me redo </a>
+        <a class=" takeQuizButton" href="/quiz">Maybe not, let me do it again </a>
 
 
         <img class="shiftRight" src="Images/PlantMenu.png" width="400" height="80" />
