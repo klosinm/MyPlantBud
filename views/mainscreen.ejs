@@ -35,6 +35,8 @@
 
 
     .Welcome {
+
+         min-width: 250px;
         position: relative;
         text-align: center;
         font-family: Optima;
@@ -118,16 +120,20 @@
         font-size: 30px;
         font-family: Optima;
         color: rgb(9, 44, 119);
+       
 
     }
 
-    .column {
+@media only screen and (min-width: 1000px) {
+  .column {
         float: left;
         width: 50%;
-
-
     }
+   
+}
 
+ 
+ 
     /* Clear floats after the columns */
     .row:after {
         content: "";
@@ -197,6 +203,7 @@
 
         <% }) %>
 
+        <p></p>
     </div>
 
 

@@ -37,6 +37,7 @@ class QuizController{
     //where quiz gets submitted to
     async show(req, res) {
 
+        
         console.log(req.body); 
         let newQuiz = await QuizDB.create(req.body.quiz);
         console.log("show in quizControler: ", newQuiz);
@@ -65,10 +66,15 @@ class QuizController{
 
 
     showPlant(req, res) {
+        
+        let plants = Plant.all();
+        console.log(plants);
+    
+
         let id = req.params.id;
         let plant = Plant.get(id);
         console.log("Plant in showPlant: " + plant);
-        res.render('plantShow', { plant: plant });
+        res.render('plantShow', { plants: plants, plant: plant });
         
     }
 

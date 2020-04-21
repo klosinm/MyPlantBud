@@ -1,28 +1,40 @@
 <html>
 
 <style>
+    .keyWords {
+        color: red;
+        font-weight: bold;
+    }
+
+    
     .title {
         text-align: Left;
         padding-left: 15px;
-        margin-top: 2px;
+        margin: 2px;
         padding-top: 18px;
-        padding-right: 15px;
+        padding: 15px;
         font-weight: bolder;
-        font-family: fantasy;
-        font-size: 40px;
+        font-family: Optima;
+        font-size: 50px;
         /*color: rgb(128, 0, 128);*/
-        color: bisque;
+        color: rgb(128, 44, 29);
+       
     }
 
-    /*aqua background for header*/
+    /*darkish aqua background for header*/
     .titleBackground {
         padding-left: 0px;
         padding-top: 0px;
-        padding-right: 15px;
         margin-bottom: 40px;
+        margin-left: 15px;
+        margin-right: 15px;
         height: 100px;
-        background-color: rgb(71, 34, 114);
-        border-radius: 15px;
+       
+         background-color: rgb(191, 211, 223);
+        width: 650px;
+
+           border-radius: 15px;
+        border: 2px solid rgb(9, 44, 119);
     }
 
 
@@ -32,18 +44,22 @@
         margin-right: auto;
         margin-top: auto;
         position: relative;
+        padding: 10px;
         font-family: sans-serif;
-        color: blanchedalmond;
+
         font-size: 15px;
 
-        width: 55px;
-        height: 55px;
-        background-color: rgb(128, 0, 128);
-        ;
-        border: 5px solid rgb(97, 9, 119);
-        border-radius: 1000px;
-    }
 
+        background-color: rgb(128, 44, 29);
+
+
+        color: blanchedalmond;
+        border: 3px solid blanchedalmond;
+
+
+        border-radius: 1000px;
+
+    }
 
 
     h2 {
@@ -52,21 +68,32 @@
     }
 
     body {
-        background-color: rgb(218, 175, 219);
+        background-color: rgb(194, 128, 115);
     }
 
 
     .Welcome {
         position: relative;
         text-align: center;
-        font-family: sans-serif;
+        font-family: Optima;
 
+        padding-left: 2px;
+        padding-right: 2px;
+
+        margin: auto;
         color: rgb(9, 44, 119);
-        background-color: blanchedalmond;
-        width: 850px;
+        background-color: rgb(191, 211, 223);
+        ;
+        margin-left: 80px;
+        margin-right: 80px;
         border-radius: 15px;
         border: 2px solid rgb(9, 44, 119);
 
+
+    }
+
+    .Center {
+        text-align: center;
     }
 
     .correct {
@@ -101,46 +128,86 @@
     }
 
 
-    .NavOptions {
-        margin-left: 3px;
-
-
-        color: blanchedalmond;
-        font-size: 15px;
-
-        text-align: center;
-
-        background-color: rgb(0, 113, 128);
-
-        border: 5px solid rgb(9, 44, 119);
-        border-radius: 10px;
-    }
-
-
-    .box {
-        display: inline-block;
-        
-        font-family: sans-serif;
-
-        color: rgb(9, 44, 119);
-        background-color: blanchedalmond;
-       
-        height: 100px;
-        border-radius: 15px;
-        border: 2px solid rgb(9, 44, 119);
-
-    }
+    
 
     .label {
         display: inline-block;
 
     }
 
+    .descriptionBox {
+        display: inline-block;
+
+        font-family: sans-serif;
+
+        margin: 10px;
+        padding: 10px;
+        color: rgb(9, 44, 119);
+        background-color: blanchedalmond;
+
+        height: 100px;
+        border-radius: 15px;
+        border: 2px solid rgb(9, 44, 119);
+
+
+    }
+
+    .box {
+        
+        margin: 10px;
+        padding: 10px;
+        display: inline-block;
+
+        font-family: sans-serif;
+
+        color: rgb(9, 44, 119);
+        background-color: blanchedalmond;
+
+        height: 100px;
+        width: 300px;
+        border-radius: 15px;
+        border: 2px solid rgb(9, 44, 119);
+
+
+
+
+    }
+
+    .plantOptions {
+
+        font-family: Optima;
+        font-size: 40px;
+        color: rgb(9, 44, 119);
+        border-right: 10px;
+
+
+    }
+
+    .backgroundColor {
+        font-family: Optima;
+
+        border: 2px solid blanchedalmond;
+        border-radius: 15px;
+        margin: 50px;
+
+        background-color: rgb(191, 211, 223);
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+
+
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
     .minititle{
-        color:rgb(97, 9, 119);
-        margin-left: 8px;
-        margin-top: 40px;
-   
         font-weight: bold;
     }
 </style>
@@ -150,39 +217,63 @@
 
 
     <div class='titleBackground'>
-        <h1 class="title">My Plant Bud - Results</h1>
-    </div>
-
-    <h1> <%= plant.Title %> </h1>
-
-    <div class="Welcome">
-        <span class="text"><%= plant.Description %></span>
-    </div>
-    </br>
-
-    <div class="box">
-        <a class= "minititle"> Water Needed: </a> </br>
-          
-        <span class="text"><%= plant.WaterNeed %></span>
-    </div>
-
-    <div class="box">
-        <a class="minititle"> How often to Water:</a> </br>
-    
-        <span class="text"><%= plant.WaterNeed %></span>
-    </div>
-
-    <div class="box">
-        <a class="minititle">Levels of Sunlight:</a> </br>
-   
-
-        <span class="text"><%= plant.Sunlight %></span>
+        <h1 class="title">My Plant Bud</h1>
     </div>
 
 
-</br>
 
-</br>
+    <div class="backgroundColor">
+        <h1 class="plantOptions"> <%= plant.Title %> </h1>
+
+        <div class="descriptionBox">
+            <span class="text"><%= plant.Description %></span>
+        </div>
+
+        <div class="row">
+            <div class="column" >
+
+                <div class="box">
+                    <a class="minititle">Levels of Sunlight:</a> </br>
+                    <span class="text"><%= plant.Sunlight %></span>
+                </div>
+
+
+                <div class="box">
+                    <a class="minititle">Watering Process:</a> </br>
+                    <span class="text"><%= plant.Watering %></span>
+                </div>
+
+
+            </div>
+            <div class="column">
+
+                
+                
+                <tr>
+                    <img src="../<%= plant.Picture %>" width="300" />
+            
+                </tr>
+         
+                
+           
+                
+            </div>
+        </div>
+
+
+
+        <tr></tr>
+        
+        
+        
+        
+        </tr>
+
+
+      
+
+    </div>
+
 
 
 
