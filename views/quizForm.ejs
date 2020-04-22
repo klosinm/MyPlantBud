@@ -97,10 +97,13 @@
             margin-bottom: 15px;
 
             font-size: 15px;
+            padding: 3px;
             color: rgb(9, 44, 119);
             background-color: rgb(191, 211, 223);
             border: 5px solid rgb(9, 44, 119);
+
             border-radius: 10px;
+
 
 
         }
@@ -108,6 +111,27 @@
 
         p {
             color: rgb(9, 44, 119);
+        }
+
+        @media only screen and (max-width: 1000px) {
+
+
+            select {
+                font-size: 20px;
+                color: rgb(128, 44, 29);
+            }
+
+        }
+
+
+        /*cute image at bottom to be centered*/
+        .shiftRight {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            font-size: 15px;
+
         }
     </style>
 </head>
@@ -177,8 +201,9 @@
 
         function empty() {
 
-            message = ""
+            message = "";
             message.length = 0;
+            correct = 1;
 
 
             //Sunlight
@@ -222,25 +247,31 @@
             if (message.length > 0) {
                 alert("Whoops! You forgot something:\n" + message);
                 return false;
+                correct = 0;
             }
-        }
+            else {
 
+
+            }
+
+        }
 
     </script>
 
-    <div class="actions">
-        <input type="submit" name="commit" value="Submit" onclick="return empty()" />
-    </div>
+    </br>
+
+    <input type="submit" name="commit" value="Submit" onclick="return empty()" />
+
+
+
 
     <a class="NavOptions" href="/MyPlantBud">Back to Menu </a>
 
-    </br>
-
-
-
 </form>
 
-<img class="shiftRight" src="Images/PlantMenu.png" width="500" height="90" />
+
+
+
 <img class="shiftRight" src="Images/PlantMenu.png" width="500" height="90" />
 
 

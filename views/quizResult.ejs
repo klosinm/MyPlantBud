@@ -8,66 +8,59 @@
     }
 
     /*TO RUN: node express.js */
-    .title {
-        text-align: Left;
-        padding-left: 15px;
-        margin: 2px;
-        padding-top: 18px;
-        padding: 15px;
-        font-weight: bolder;
-        font-family: Optima;
-        font-size: 50px;
-        /*color: rgb(128, 0, 128);*/
-        color: blanchedalmond;
+    
 
-    }
+.title {
+            text-align: Left;
+            padding-left: 15px;
+            margin: 2px;
+            padding-top: 18px;
+            padding: 15px;
+            font-weight: bolder;
+            font-family: Optima;
+            font-size: 50px;
+            /*color: rgb(128, 0, 128);*/
+            color: rgb(128, 44, 29);
 
-    /*darkish aqua background for header*/
-    .titleBackground {
-        padding-left: 0px;
-        padding-top: 0px;
-        margin-bottom: 40px;
-        margin-left: 15px;
-        margin-right: 15px;
-        height: 100px;
+        }
 
-        background-color: rgb(128, 44, 29);
-        width: 650px;
+        /*aqua background for header*/
+        .titleBackground {
+            padding-left: 0px;
+            padding-top: 0px;
+            margin-bottom: 40px;
+            margin-left: 15px;
+            margin-right: 15px;
+            height: 100px;
 
-        border-radius: 15px;
-        border: 2px solid rgb(9, 44, 119);
-    }
+            background-color: rgb(191, 211, 223);
+            width: 650px;
 
-
-
-    .takeQuizButton {
-        display: inline;
-        text-align: center;
-        margin-right: auto;
-        margin-top: auto;
-        position: relative;
-        padding-top: 10px;
-        font-family: Optima;
-
-        font-size: 15px;
-
-
-
-        background-color: rgb(128, 44, 29);
-
-
-        color: blanchedalmond;
-        border: 3px solid blanchedalmond;
-
-
-        border-radius: 1000px;
-
-    }
+            border-radius: 15px;
+            border: 2px solid rgb(9, 44, 119);
+        }
 
 
     h2 {
         font-size: 45px;
         display: inline;
+    }
+
+    .goBackToMenu {
+        display: inline;
+        text-align: center;
+        position: relative;
+        padding: 10px;
+        font-family: Optima;
+
+        font-size: 15px;
+
+
+        background-color: rgb(128, 44, 29);
+        color: blanchedalmond;
+        border: 3px solid blanchedalmond;
+
+        border-radius: 1000px;
     }
 
     body {
@@ -80,15 +73,15 @@
         text-align: center;
         font-family: Optima;
 
-        padding-left: 2px;
-        padding-right: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
 
         margin: auto;
         color: rgb(9, 44, 119);
-        background-color: rgb(191, 211, 223);
-        ;
-        margin-left: 80px;
-        margin-right: 80px;
+        background-color: blanchedalmond;
+        
+        margin: 80px;
+       
         border-radius: 15px;
         border: 2px solid rgb(9, 44, 119);
 
@@ -105,11 +98,12 @@
         font-family: Optima;
         margin: auto;
         margin-bottom: 15px;
+        padding: 10px;
         color: rgb(9, 44, 119);
         background-color: blanchedalmond;
         width: 100px;
         border-radius: 15px;
-        border: 2px solid rgb(9, 44, 119);
+       
 
     }
 
@@ -133,29 +127,39 @@
 
 
     .NavOptions {
-        margin-left: 3px;
+            font-family: Optima;
 
+            margin-left: 15px;
+            padding: 3px;
+            margin-bottom: 10px;
 
-        color: blanchedalmond;
-        font-size: 17px;
-        font-family: Optima;
-
-        text-align: center;
-
-        background-color: rgb(128, 44, 29);
-        padding: 10px;
-
-        border: 3px solid rgb(9, 44, 119);
-        border-radius: 10px;
-    }
+            font-size: 15px;
+            color: rgb(9, 44, 119);
+            background-color: rgb(191, 211, 223);
+            border: 5px solid rgb(9, 44, 119);
+            border-radius: 10px;
+            padding: 10px;
+        }
 
     .label {
         display: inline-block;
 
     }
+
+     .shiftRight {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-size: 15px;
+
+        }
 </style>
 
 <body>
+
+
 
     <div class='titleBackground'>
         <h1 class="title">My Plant Bud - Verification</h1>
@@ -175,10 +179,12 @@
 
         </p>
 
+        <p class="correct"> Is this correct?</p>
+
     </div>
 
 
-    <p class="correct"> Is this correct?</p>
+   
 
     </br>
 
@@ -229,23 +235,22 @@
     </div>
 
 
+  
+
+
+<p></p>
+
+
+
+
+
+    <img class="shiftRight" src="Images/PlantMenu.png" width="500" height="90" />
+  
+
+        <p></p>
     <div>
-        <a class="NavOptions takeQuizButton " href="/MyPlantBud">Back to Menu </a>
-
+        <a class="goBackToMenu " href="/MyPlantBud">Back to Menu </a>
+    
     </div>
-
-    <p></p>
-
-
-
-
-
-
-
-
-
-
-    <img class="shiftRight" src="Images/PlantMenu.png" width="500" height="90" />
-    <img class="shiftRight" src="Images/PlantMenu.png" width="500" height="90" />
 
 </html>
