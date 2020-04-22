@@ -2,7 +2,7 @@
   "name": "myplantbud",
   "version": "1.0.0",
   "description": "A site to take a quiz to see what plant friend you should own",
-  "main": "Plant.js",
+  "main": "express.js",
   "dependencies": {
     "ejs": "^3.0.1",
     "express": "^4.17.1",
