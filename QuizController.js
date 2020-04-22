@@ -93,7 +93,7 @@ class QuizController {
 
         //Check if there is a plant in database
         if (!plant) {
-            alert(" Whoops!  We only have 6 plants. No plant number " + id + "!");
+            res.send(" Whoops!  We only have 6 plants. No plant number " + id + "!");
         }
         else {
             res.render('plantShow', { plants: plants, plant: plant });
