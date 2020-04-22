@@ -1,10 +1,11 @@
 # MyPlantBud </br>
 
+##### Found at: https://myplantbud.herokuapp.com/MyPlantBud </br>
 A website holding information about house plants. Users can take a quiz to see which plant would be best for their lifestyle or just browse the possible plants they could have.
 
 ____________________________________________________________________________________
 
-When the user goes to https://myplantbud.herokuapp.com/MyPlantBud, they will see this page: </br>
+When the user goes to _My Plant Bud_, they will see this page: </br>
 <p align="center">
 <img src="public/Images/MPBmainmenu.png" width="570">
 </p>
@@ -45,7 +46,7 @@ This is the same page that will show if the user selects from the home screen a 
 ```
 https://myplantbud.herokuapp.com/plant/{plant id}
 ```
-</br>
+
 After all this work, the user finds out what house plant they would be happy with (in this case, a Hoya!). The user can read some fun facts about their plant bud, as well as see specifically the amount of sunlight and the specific watering process their plant bud will need. </br>
 
 <p align="center">
@@ -55,4 +56,4 @@ After all this work, the user finds out what house plant they would be happy wit
 ______________________________________________________________________________
 
 Last Updated: April 2020 </br>
-Pictures and data provided by my sister, Syliva Klosin https://github.com/klosins (thank you Sylv!)
+Pictures and data provided by my sister, Sylvia Klosin https://github.com/klosins (thank you Sylv!)
