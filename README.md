@@ -6,9 +6,9 @@ ________________________________________________________________________________
 
 
 When the user goes to https://myplantbud.herokuapp.com/MyPlantBud, they will see this page: </br>
-
-<img style="text-align:center" src="public/Images/MPBmainmenu.png" width="270">
-
+<p align="center">
+<img src="public/Images/MPBmainmenu.png" width="570">
+</p>
 Here, the user can either click on an image of a plant to be directed to a page holding info of the plant, or take a quiz to see which plant would be best suited for their lifestyle. </br>
 
 ______________________________________________________________________________
@@ -16,13 +16,13 @@ ______________________________________________________________________________
 #### Quiz </br>
 
 If the user clicks on "Take Quiz", they will be sent to this page: </br>
-
-<img style="text-align:center" src="public/Images/MBPquiz.png" width="270">
-
+<p align="center">
+<img  src="public/Images/MBPquiz.png" width="570">
+</p>
 The user must select an options for all questions, if they don't, they will be alerted of their mistake and told to answer the question(s): </br>
-
-<img style="text-align:center" src="/public/Images/MPBquizwrong.png" width="270">
-
+<p align="center">
+<img  src="public/Images/MPBquizwrong.png" width="570">
+</p>
 Otherwise, if the user answered all questions and they click submit, they will go to the verification page, </br>
 
 
@@ -42,9 +42,9 @@ This is the same page that will show if the user selects from the home screen a 
 ```
 https://myplantbud.herokuapp.com/plant/{plant id}
 ```
-
-<img style="text-align:center" src="public/Images/MPBresult.png" width="270">
-
+<p align="center">
+<img  src="public/Images/MPBresult.png" width="570">
+</p>
 
 ______________________________________________________________________________
 Last Updated: April 2020
