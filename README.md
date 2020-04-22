@@ -40,13 +40,13 @@ ______________________________________________________________________________
 
 ### Plant Page </br>
 
-This is the same page that will show if the user selects from the home screen a plant picture. The page renders based on which plant is called in the URL (the picture below is where the id for the plant Hoya is 5.)
-
+This is the same page that will show if the user selects from the home screen a plant picture. The page renders based on which plant is called in the URL (the picture below is where the id for the plant Hoya is 5).
+</br>
 ```
 https://myplantbud.herokuapp.com/plant/{plant id}
 ```
 </br>
-After all this work, the user finds out what house plant they would be happy with (in this case, a Hoya!). The user can read some fun facts about their plant bud, as well as see specifcally the amount of sunlight and watering their plant bud will need.
+After all this work, the user finds out what house plant they would be happy with (in this case, a Hoya!). The user can read some fun facts about their plant bud, as well as see specifically the amount of sunlight and the specific watering process their plant bud will need. </br>
 
 <p align="center">
 <img  src="public/Images/MPBresult.png" width="570">
@@ -55,4 +55,4 @@ After all this work, the user finds out what house plant they would be happy wit
 ______________________________________________________________________________
 
 Last Updated: April 2020 </br>
-Pictures and data provided by my sister, Syliva Klosin (https://github.com/klosins)
+Pictures and data provided by my sister, Syliva Klosin https://github.com/klosins (thank you Sylv!)
