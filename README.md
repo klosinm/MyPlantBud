@@ -17,7 +17,7 @@ ______________________________________________________________________________
 
 If the user clicks on "Take Quiz", they will be sent to this page: </br>
 <p align="center">
-<img  src="public/Images/MBPquiz.png" width="570">
+<img src="public/Images/MPBquiz.png" width="570">
 </p>
 The user must select an options for all questions, if they don't, they will be alerted of their mistake and told to answer the question(s): </br>
 <p align="center">
@@ -29,6 +29,10 @@ Otherwise, if the user answered all questions and they click submit, they will g
 ______________________________________________________________________________
 
 #### Verification </br>
+
+<p align="center">
+<img  src="public/Images/MPBverify.png" width="570">
+</p>
 
 After completing the quiz, the user will be shown a page with their selected options, and then asked if these answers are correct or not. If the user clicks "Maybe not, let me do it again", they will be sent back to the quiz page. </br>
 If the user clicks "Yes!", then the respsective plant page will render.
