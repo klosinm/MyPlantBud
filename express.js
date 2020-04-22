@@ -20,6 +20,11 @@ app.get('/MyPlantBud', function (req, res) {
     quizController.menu(req, res);
 });
 
+app.get('/', function (req, res) {
+    //res.render('mainscreen');
+    quizController.menu(req, res);
+});
+
 /* Parse the request body if there is POST data */
 app.use(bodyParser.urlencoded({ extended: true }));
 
