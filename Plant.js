@@ -1,5 +1,10 @@
 
-//Where plant information is stored
+/*****
+ * Class where the plant data is created
+ * 
+ * By: Monica Klosin
+ * April 2020
+ ******/
 class Plant {
 
     constructor(info) {
@@ -11,7 +16,6 @@ class Plant {
             this.Watering = info.Watering;
             this.Sunlight = info.Sunlight;
             this.Picture = info.Picture;
-            
         }
        
     }
@@ -68,7 +72,6 @@ Plant.create({
     Picture: "Images/pothos.jpg"
     
 });
-
 Plant.create({
     Title: "Hoya Carnosa",
     Description: "A beautiful climing plant that has pink, white, and green leaves! It loves light and high humidity. Be careful not to overwater this one. If you take good care of it can bloom pink flowers!",
@@ -87,5 +90,4 @@ Plant.create({
 
 
 console.log("Plant.js: " + Plant.plantCollection);
-
 module.exports = Plant;

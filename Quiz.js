@@ -1,17 +1,20 @@
+/*****
+ *  Class where the quiz answers get checked and 
+ * rendered
+ *
+ * By: Monica Klosin
+ * April 2020
+ ******/
 class Quiz{
 
     constructor(description) {
-        // if description is null or undefined, we want to create an "empty" Toy object.
         if (description) {
             this.sunlight = description.sunlight;
             this.water = description.water;
             this.plantplacement = description.plantplacement;
             this.TypeofPlant = description.TypeofPlant;
             this.colors = description.colors;
-          
-         
-        }
-     
+        } 
         this.errors = [];
     }
 
@@ -24,7 +27,6 @@ class Quiz{
         let newQuiz = new Quiz(quizInfo);
 
         if (newQuiz.isValid()) {
-
             newQuiz.id = ++Quiz.Quizid;
             this.quizCollection.push(newQuiz);
         }
@@ -55,14 +57,12 @@ class Quiz{
             this.errors.push("Please select colors.");
         }
      
-        console.log(this.errors.length); //works
-        
+        //console.log(this.errors.length); 
         return this.errors.length <= 0;
     }
 
 }
 Quiz.Quizid = 0;
 Quiz.quizCollection = [];
-
 console.log("Quiz Collection in Quiz.js: " + Quiz.quizCollection);
 module.exports = Quiz;

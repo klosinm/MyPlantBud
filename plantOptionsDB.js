@@ -1,7 +1,18 @@
 const Quiz = require('./Quiz');
 
-class plantOptionsDB {
 
+/*****
+ * Class where the quiz data is given an id/
+ * to find the quiz data later.
+ * 
+ * This would have been more implemented if an account was
+ * made, annd the user could see their past answers. I did 
+ * not get this done in version 1.0.0
+ *
+ * By: Monica Klosin
+ * April 2020
+ ******/
+class plantOptionsDB {
 
     static all() {
         return this.allQuizes;
@@ -11,9 +22,7 @@ class plantOptionsDB {
         return this.allQuizes.find((item) => item.id == id);
     }
 
-
     static create(quizDescription) {
-
         let newQuiz = new Quiz(quizDescription);
         console.log("In DB, create method: ", newQuiz);
         if (newQuiz.isValid()) {
@@ -28,8 +37,6 @@ class plantOptionsDB {
         console.log("IN CREATE AFTER", newQuiz);
         return newQuiz;
     }
-
 }
 plantOptionsDB.allQuizes = [];
-
 module.exports = plantOptionsDB;
