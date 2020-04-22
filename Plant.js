@@ -40,7 +40,7 @@ Plant.plantCollection = [];
 
 Plant.create({
     Title: "ZZ Plant",
-    Description: "A very easy to care plant with striking foliage. It's stems cann grow up to 3ft indoors. Will grow slowly, so be patient with this one!",
+    Description: "A very easy to care plant with striking foliage. Its stems cann grow up to 3ft indoors. Will grow slowly, so be patient with this one!",
     Watering: "Water when the top two inches of soil are dry - do not let this plant sit in very wet soil ",
     Sunlight: "Can tolerate both bright and low light levels - but it does not like direct sun",
     Picture: "Images/zzPlant.jpg"
@@ -56,13 +56,13 @@ Plant.create({
     Title: "Stromanthe Trio Star",
     Description: "Called \"Trio\" for the three colors in its leaves - white, pink, green. The brighter the light, the more pink in the leaves. ",
     Watering: "It likes humidity - so feel free to spritz it with a mister. ",
-    Sunlight: "Likes bright light, but watch that it does not burn with too much direct light ",
+    Sunlight: "Likes bright light, but watch that it does not burn with too much direct light",
     Picture: "Images/trioStar.jpg"
    
 });
 Plant.create({
     Title: "Pothos",
-    Description: "Ideal plant for beginners. It's leaves can be golden yellow, as well as green. Will grow in hanging pots, but also anywhere you please. ",
+    Description: "Ideal plant for beginners. Its leaves can be golden yellow, as well as green. Will grow in hanging pots, but also anywhere you please. ",
     Watering: "Keep the soil moist but not soggy. If you have not watered in a while and the leaves are drooping it is time to water again.",
     Sunlight: "Can tolerate both bright and low light levels - but it does not like direct sun",
     Picture: "Images/pothos.jpg"
