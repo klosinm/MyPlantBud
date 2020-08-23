@@ -5,6 +5,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static("public")); //or single quotes
+app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
 

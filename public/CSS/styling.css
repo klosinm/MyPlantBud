@@ -1,0 +1,292 @@
+/*TO RUN: node express.js */
+
+/*For footers:*/
+
+a {
+    color: bisque;
+    text-decoration: none;
+}
+
+.actions {
+    margin-left: 11px;
+}
+
+a:visited:visited {
+    text-decoration: none;
+}
+
+.AboutMe {
+    margin-top: 15px;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: rgb(134, 77, 67);
+    color: bisque;
+    border-bottom: 5px solid rgb(191, 211, 223);
+}
+
+.backgroundColor {
+    font-family: Optima;
+    border: 2px solid blanchedalmond;
+    border-radius: 15px;
+    margin: 50px;
+    background-color: rgb(191, 211, 223);
+}
+
+body {
+    background-color: rgb(194, 128, 115);
+    margin: 0;
+}
+
+.box {
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    font-family: Optima;
+    color: rgb(9, 44, 119);
+    background-color: blanchedalmond;
+    height: 100px;
+    width: 300px;
+    border-radius: 15px;
+    border: 2px solid rgb(9, 44, 119);
+}
+
+.Center {
+    position: block;
+    text-align: center;
+}
+
+.correct {
+    position: relative;
+    text-align: center;
+    font-family: Optima;
+    margin: auto;
+    color: rgb(9, 44, 119);
+    background-color: blanchedalmond;
+    width: 100px;
+    border-radius: 15px;
+}
+
+.descriptionBox {
+    display: inline-block;
+    font-family: Optima;
+    margin: 10px;
+    padding: 10px;
+    color: rgb(9, 44, 119);
+    background-color: blanchedalmond;
+    height: 100px;
+    border-radius: 15px;
+    border: 2px solid rgb(9, 44, 119);
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.goBackToMenu {
+    display: inline;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    padding-left: 15px;
+    margin-left: 25px;
+    font-family: Optima;
+    font-size: 15px;
+    background-color: rgb(128, 44, 29);
+    color: blanchedalmond;
+    border: 3px solid blanchedalmond;
+    border-radius: 1000px;
+}
+
+h2 {
+    font-size: 45px;
+    display: inline;
+}
+
+.imageDesign {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: 2px solid blanchedalmond;
+    border-radius: 10px;
+}
+
+input {
+    font-family: Optima;
+    margin-left: 3px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    padding: 3px;
+    color: rgb(9, 44, 119);
+    background-color: rgb(191, 211, 223);
+    border: 5px solid rgb(9, 44, 119);
+    border-radius: 10px;
+}
+
+.label {
+    display: inline-block;
+}
+
+.keyWords {
+    color: red;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px) {
+    select {
+        font-size: 20px;
+        color: rgb(128, 44, 29);
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .column {
+        float: left;
+        width: 50%;
+    }
+}
+
+.minititle {
+    font-weight: bold;
+}
+
+.NavOptions {
+    font-family: Optima;
+    margin-left: 15px;
+    padding: 3px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: rgb(9, 44, 119);
+    background-color: rgb(191, 211, 223);
+    border: 5px solid rgb(9, 44, 119);
+    border-radius: 10px;
+}
+
+option {
+    background-color: #82ff8c;
+}
+
+p {
+    color: rgb(9, 44, 119);
+}
+
+.plantOptions {
+    background-color: rgb(191, 211, 223);
+    font-family: Optima;
+    color: rgb(9, 44, 119);
+    border: 2px solid blanchedalmond;
+    border-radius: 15px;
+    margin: 50px;
+    text-align: center;
+}
+
+/*For submit/ Go back to menu buttosns*/
+
+.quizButtons {
+    padding-left: 15px;
+    margin: 2px;
+}
+
+.QuizBorder {
+    width: auto;
+    height: auto;
+    margin-right: 150px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(191, 211, 223);
+    overflow: auto;
+    border: 5px solid blanchedalmond;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*cute image at bottom to be centered*/
+
+.shiftRight {
+    color: rgb(9, 44, 119);
+    display: block;
+    text-align: center;
+    font-family: Optima;
+    margin: auto;
+}
+
+.takeQuizButton {
+    text-align: center;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 10px;
+    position: relative;
+    padding-top: 10px;
+    font-family: Optima;
+    color: rgb(9, 44, 119);
+    font-size: 15px;
+    width: 55px;
+    height: 50px;
+    background-color: rgb(191, 211, 223);
+    border: 5px solid rgb(9, 44, 119);
+    border-radius: 1000px;
+}
+
+.title {
+    text-align: Left;
+    padding-left: 15px;
+    margin: 2px;
+    padding-top: 18px;
+    padding: 15px;
+    font-weight: bolder;
+    font-family: Optima;
+    font-size: 50px;
+    /*color: rgb(128, 0, 128);*/
+    color: rgb(128, 44, 29);
+}
+
+/*aqua background for header*/
+
+.titleBackground {
+    padding-left: 0px;
+    padding-top: 0px;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 100px;
+    background-color: rgb(191, 211, 223);
+    width: 650px;
+    border-radius: 15px;
+    border: 2px solid rgb(9, 44, 119);
+}
+
+.Welcome {
+    min-width: 250px;
+    position: relative;
+    text-align: center;
+    font-family: Optima;
+    padding: 30px;
+    text-align: center;
+    margin: auto;
+    color: rgb(9, 44, 119);
+    background-color: blanchedalmond;
+    margin-left: 80px;
+    margin-right: 80px;
+    border-radius: 15px;
+    border: 2px solid rgb(9, 44, 119);
+}
+
+.WelcomeText {
+    padding: 5px;
+    font-size: 20px;
+    font-family: Optima;
+    color: rgb(9, 44, 119);
+}

@@ -1,185 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    /*TO RUN: node express.js */
-    .title {
-        text-align: Left;
-        padding-left: 15px;
-        margin: 2px;
-        padding-top: 18px;
-        padding: 15px;
-        font-weight: bolder;
-        font-family: Optima;
-        font-size: 50px;
-        /*color: rgb(128, 0, 128);*/
-        color: rgb(128, 44, 29);
-
-    }
-
-    /*darkish aqua background for header*/
-    .titleBackground {
-        padding-left: 0px;
-        padding-top: 0px;
-        margin-bottom: 40px;
-        margin-left: 15px;
-        margin-right: 15px;
-        height: 100px;
-
-        background-color: rgb(191, 211, 223);
-        width: 650px;
-
-        border-radius: 15px;
-        border: 2px solid rgb(9, 44, 119);
-    }
-
-
-    .Welcome {
-
-        min-width: 250px;
-        position: relative;
-        text-align: center;
-        font-family: Optima;
-
-
-        padding: 30px;
-        text-align: center;
-
-
-
-        margin: auto;
-        color: rgb(9, 44, 119);
-        background-color: blanchedalmond;
-        margin-left: 80px;
-        margin-right: 80px;
-        border-radius: 15px;
-        border: 2px solid rgb(9, 44, 119);
-
-    }
-
-    h2 {
-        font-size: 45px;
-        display: inline;
-    }
-
-    body {
-        /*background-image: url('../Images/wood.jpg');*/
-        background-color: rgb(194, 128, 115);
-
-        margin: 0;
-    }
-
-    .plantOptions {
-        background-color: rgb(191, 211, 223);
-        font-family: Optima;
-        color: rgb(9, 44, 119);
-        border: 2px solid blanchedalmond;
-        border-radius: 15px;
-        margin: 50px;
-        text-align: center;
-
-
-    }
-
-
-    .takeQuizButton {
-        display: inline;
-        text-align: center;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: 10px;
-        position: relative;
-        padding-top: 10px;
-        font-family: Optima;
-        color: rgb(9, 44, 119);
-        font-size: 15px;
-        width: 55px;
-        height: 50px;
-        background-color: rgb(191, 211, 223);
-        border: 5px solid rgb(9, 44, 119);
-        border-radius: 1000px;
-
-    }
-
-    .Center {
-        position: block;
-
-        text-align: center;
-
-    }
-
-    .shiftRight {
-        color: rgb(9, 44, 119);
-
-        display: block;
-        text-align: center;
-        font-family: Optima;
-        margin: auto;
-
-    }
-
-    .WelcomeText {
-        font-size: 30px;
-        font-family: Optima;
-        color: rgb(9, 44, 119);
-
-
-    }
-
-    @media only screen and (min-width: 1000px) {
-        .column {
-
-            float: left;
-            width: 50%;
-        }
-
-    }
-
-    .AboutMe {
-
-        position: relative;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        padding: 1rem;
-
-        background-color: rgb(134, 77, 67);
-        color: bisque;
-
-        border-bottom: 5px solid rgb(191, 211, 223);
-
-    }
-
-
-
-    /* Clear floats after the columns */
-    .row:after {
-
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-
-    a {
-        color: bisque;
-        text-decoration: none;
-    }
-
-    a:visited:visited {
-
-        text-decoration: none;
-    }
-</style>
-
 <head>
+    <link href="CSS/styling.css" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8">
     <title>My Plant Bud</title>
 </head>
 
 <body>
-
-
 
     <div class='titleBackground'>
         <h1 class="title">My Plant Bud</h1>
@@ -189,15 +17,12 @@
         <div class="column">
             <div class="Welcome">
                 <div class="WelcomeText"> Welcome to My Plant Bud!</div>
-
                 <p>
                     This site is for you to
                     decide which house plant would be best for you and your home. </br>
                     Take the quiz to the right to see which house plant would be the happiest in your home, or just
                     look at all plants we have available to see which plant is right for you!
-
                 </p>
-
             </div>
         </div>
         <div class="column">
@@ -210,49 +35,29 @@
     </div>
     </div>
 
-
-
-
-
-
     <div class="plantOptions">
         <div class="WelcomeText">Possible Buds!</div>
         </br>
         Click on a plant to learn about them!
         </br>
 
-
         <%    plants.forEach((plant) => { %>
-
         <tr>
-
             <a href="/plant/<%= plant.id %>"><img src="<%- plant.Picture %>" width="300" /></a>
-
-
         </tr>
-
         <% }) %>
-
         <p></p>
     </div>
-
-
-
-
 </body>
 
 
 <div class="AboutMe">
-
-
     <a href="https://github.com/klosinm">Made by: Monica Klosin </a>
     </br>
-
     <a href="https://github.com/klosins">Photos and Data Provided by: Sylvia Klosin </a>
     </br>
     </br>
-    Last Updated: April 2020
-
+    Last Updated: August 2020
 </div>
 
 </html>

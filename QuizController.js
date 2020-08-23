@@ -2,6 +2,7 @@ const Quiz = require('./Quiz');
 const QuizDB = require('./plantOptionsDB');
 const Plant = require('./Plant');
 
+
 /*****
  *  Class where all the pages get linked together.
  * 
